@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile {{user}}</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="padding-top" style="padding-top:15px ; padding-left: 15px;">
+        <div style=" background-color: #E7FD0F; height: 60px; width: 210px; border-radius: 20px;">
+            <h1 style="padding-top: 10px; font-family: 'PT Sans', 'Arial', serif"><a href="{% url 'home' %}"
+                                                                                     style="color: #404040;">. CyberNews
+                .</a></h1>
+        </div>
+    </div>
+</div>
+<div class="bod">
+    <div class="bod1">
+        <center><h2><ion-icon name="person-outline"></ion-icon> {{ user }}</h2></center>
+        <div class="r">
+            <h3>email | {{ user.email }}</h3>
+            <a href="">redact email</a> <br>
+            <a href="">redact username</a>
+        </div>
+        <div class="l">
+            <h2><strong>if you want to place your ad, or share news, <br><a href="">let us know</a></strong></h2>
+        </div>
+        <div class="bottom">
+            <a href="{% url 'home' %}"><button class="home">go to home</button></a>
+        </div>
+    </div>
+</div>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #DDD;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: #373737;
+  color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bod {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 100px;
+    color: #8041FF;
+}
+
+.bod1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    background-color: #8041FF;
+    border: 4px solid #E7FD0F;
+    border-radius: 2px;
+    height: 400px;
+
+}
+.r {
+    box-shadow: 0 24px 45px rgba(0, 0, 0, 0.4);
+    float: left;
+    max-width: 560px;
+    padding: 30px 30px;
+    color: #8041FF;
+    background: #E7FD0F;
+}
+.l {
+    box-shadow: 0 24px 45px rgba(0, 0, 0, 0.4);
+    float: right;
+    max-width: 560px;
+    background: #E7FD0F;
+    padding: 30px 30px;
+    color: #8041FF;
+}
+
+.bottom {
+    margin-top: 250px;
+    padding-left: 400px;
+}
+
+.home {
+    transition-duration: 0.4s;
+}
+
+.home:hover {
+  background-color: #661BFF;
+  color: white;
+}
+
+.home {
+    background-color: #E7FD0F;
+    color: black;
+    border: 4px solid #8041FF;
+    padding: 15px 32px;
+    border-radius: 20px;
+}
+
+    </style>
+</body>
+</html>

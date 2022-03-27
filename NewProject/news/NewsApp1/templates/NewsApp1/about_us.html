@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about Cyber-News</title>
+</head>
+<body>
+<div class="header1">
+    <div class="padding-top" style="padding-top: 1px; padding-left: 15px; margin-bottom: 20px;">
+        <div style=" background-color: #E7FD0F; height: 60px; width: 210px; border-radius: 20px;">
+            <h1 style="padding-top: 10px; font-family: 'PT Sans', 'Arial', serif"><a href="{% url 'home' %}"
+                                                                                     style="color: #404040;">. CyberNews
+                .</a></h1>
+        </div>
+    </div>
+</div>
+<div style="padding-left: 150px; padding-left: 150px;">
+    <div class="header">
+        <div class="div-1-header">
+            <nav class="nav1">
+                <a href="{% url 'home' %}">
+                    <button class="btn">home</button>
+                </a>
+                <a href="{% url 'profile' %}">
+                    <button class="btn">profile</button>
+                </a>
+                <a href="">
+                    <button class="btn">contact us</button>
+                </a>
+                <a href="{ url 'all_news' }">
+                    <button class="btn">all news</button>
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    background: #DDD;
+    font-size: 16px;
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: #373737;
+    color: #404040;
+    }
+    .header {
+    position: absolute;
+    border-radius: 20px;
+    background-color: #8041FF;
+    border-top: 46px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 70px;
+    margin: 0px;
+    width: 920px;
+    height: 50px;
+    border: 4px solid #424949;
+    }
+
+    .div-1-header {
+    padding-left: 200px;
+    border-top: 5px;
+    border-radius: 20px;
+    background-color: #661BFF;
+    border-top: -15px;
+    width: 700px;
+    height: 45px;
+    border: 4px solid #E7FD0F;
+    }
+
+    .btn {
+     background-color: #E7FD0F;
+     color: black;
+     border: 4px solid #8041FF;
+     padding: 15px 32px;
+     border-radius: 20px;
+    }
+    .btn {
+    transition-duration: 0.4s;
+    }
+
+    .btn:hover {
+    background-color: #661BFF;
+    color: white;
+    }
+
+
+</style>
+</body>
+</html>

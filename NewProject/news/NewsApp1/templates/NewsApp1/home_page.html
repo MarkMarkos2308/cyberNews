@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+<div class="header">
+    <div class="padding-top" style="padding-top:0.1px ; padding-left: 15px; float: left;">
+        <div style=" background-color: #E7FD0F; height: 60px; width: 210px; border-radius: 20px;">
+            <h1 style="padding-top: 10px; font-family: 'PT Sans', 'Arial', serif"><a href="{% url 'home' %}"
+                                                                                     style="color: #404040;">. CyberNews
+                .</a></h1>
+        </div>
+    </div>
+    <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'profile' %}" style="color: #404040;">
+            <div class="user" style="float: left; margin-left: 770px;">
+                <h3>{{user}}
+                    <ion-icon name="person-outline"></ion-icon>
+                    |
+                </h3>
+            </div>
+        </a>
+        <div style="float: right;">
+            <a href="{% url 'logout' %}" class="afd">
+                <h3 style="color: #404040;">logout
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </h3>
+            </a>
+        </div>
+        {% else %}
+        <a href="{% url 'login' %}" style="color: #404040;">
+            <div class="user" style="float: left; margin-left: 1020px;">
+                <h3>login
+                    <ion-icon name="log-in-outline"></ion-icon>
+                </h3>
+            </div>
+        </a>
+        {% endif %}
+    </div>
+    <h2 class="h11" style="padding-left: 500px; padding-top: 70px;">
+        <div class="div-1-header" style="padding-top: 10px;">
+            <nav class="navigation">
+                <center>
+                    <a href="{% url 'about us' %}">
+                        <button>about us
+                            <ion-icon name="accessibility-outline"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="">
+                        <button>contact us
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="">
+                        <button>message for site
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                        </button>
+                    </a>
+                    <a href="">
+                        <button>all news
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                        </button>
+                    </a>
+                </center>
+            </nav>
+        </div>
+    </h2>
+</div>
+<div class="prostodiv" style="padding-top: 142px;">
+    <div class="left">
+        <nav class="navigation2">
+            <a href="#win1">
+                <h1>
+                    <button>global news
+                        <ion-icon name="earth-outline"></ion-icon>
+                    </button>
+                </h1>
+            </a>
+            <a href="#win2">
+                <h1>
+                    <button>hacker news
+                        <ion-icon name="finger-print-outline"></ion-icon>
+                    </button>
+                </h1>
+            </a>
+            <a href="#win3">
+                <h1>
+                    <button>technical news
+                        <ion-icon name="hardware-chip-outline"></ion-icon>
+                    </button>
+                </h1>
+            </a>
+            <a href="#win4">
+                <h1>
+                    <button>web news
+                        <ion-icon name="globe-outline"></ion-icon>
+                    </button>
+                </h1>
+            </a>
+            <a href="#win5">
+                <h1>
+                    <button>automobile news
+                        <ion-icon name="car-sport-outline"></ion-icon>
+                    </button>
+                </h1>
+            </a>
+            <a href="#win6">
+                <h1>
+                    <button>game news
+                        <ion-icon name="game-controller-outline"></ion-icon>
+                    </button>
+                </h1>
+            </a>
+            <a href="#win7">
+                <h1>
+                    <button>site news
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                    </button>
+                </h1>
+            </a>
+        </nav>
+    </div>
+</div>
+    <a href="#x" class="overlay" id="win1"></a>
+    <div class="popup">
+
+        <a class="close" title="Закрыть" href="page.html" onclick="return false"></a>
+    </div>
+
+    <a href="#x" class="overlay" id="win2"></a>
+    <div class="popup">
+
+        <a class="close" title="Закрыть" href="page.html" onclick="return false"></a>
+    </div>
+
+    <a href="#x" class="overlay" id="win3"></a>
+    <div class="popup">
+
+        <a class="close" title="Закрыть" href="page.html" onclick="return false"></a>
+    </div>
+
+    <a href="#x" class="overlay" id="win4"></a>
+    <div class="popup">
+
+        <a class="close" title="Закрыть" href="page.html" onclick="return false"></a>
+    </div>
+
+    <a href="#x" class="overlay" id="win5"></a>
+    <div class="popup">
+
+        <a class="close" title="Закрыть" href="page.html" onclick="return false"></a>
+    </div>
+
+    <a href="#x" class="overlay" id="win6"></a>
+    <div class="popup">
+
+        <a class="close" title="Закрыть" href="page.html" onclick="return false"></a>
+    </div>
+
+    <a href="#x" class="overlay" id="win7"></a>
+    <div class="popup">
+
+        <a class="close" title="Закрыть" href="page.html" onclick="return false"></a>
+    </div>
+<style>
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+.popup {
+    top: -10000%;
+    right: 0;
+    left: 57%;
+    font-size: 14px;
+    z-index: 20;
+    margin: 0;
+    width: 100%;
+    min-height: 956px;
+    max-width: 950px;
+    position: absolute;
+    padding: 15px;
+    border: 3px solid #424949;
+    background: #fefefe;
+    border-radius: 15px;
+    background-color: #9B9B9B;
+}
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+body {
+    padding-left: 45px;
+    padding-right: 45px;
+    background-color: #373737;
+    color: #404040;
+    border-top: 10px;
+}
+
+a {
+    color: #8FC5E5;
+}
+
+.afd {
+    text-decoration: none;
+}
+
+.header {
+    position: absolute;
+    border-radius: 20px;
+    background-color: #8041FF;
+    border-top: 46px;
+    padding-left: 0px;
+    padding-right: 21px;
+    margin: 0px;
+    height: 150px;
+    border: 4px solid #424949;
+}
+
+.div-1-header {
+    border-top: 5px;
+    border-radius: 20px;
+    background-color: #661BFF;
+    border-top: -15px;
+    width: 800px;
+    height: 45px;
+    border: 4px solid #E7FD0F;
+    margin-bottom: 30px;
+}
+
+.navigation button {
+     background-color: #E7FD0F;
+     color: black;
+     border: 4px solid #8041FF;
+     padding: 15px 32px;
+     border-radius: 20px;
+}
+.navigation button {
+    transition-duration: 0.4s;
+}
+
+.navigation button:hover {
+  background-color: #661BFF;
+  color: white;
+}
+.left {
+    margin-top: 10%;
+    border-radius: 0px;
+    background-color: #9B9B9B;
+    border-top: 46px;
+    padding-left: 0px;
+    padding-right: 21px;
+    margin: 0px;
+    height: 1000px;
+    border: 4px solid #424949;
+    width: 300px;
+    padding-left: 30px;
+}
+.navigation2 button {
+     background-color: #646464;
+     color: black;
+     border: 4px solid #8041FF;
+     padding: 5px 80px;
+     border-radius: 20px;
+}
+.navigation2 button {
+    transition-duration: 0.4s;
+}
+
+.navigation2 button:is_activate {
+    background-color: #661BFF;
+  color: white;
+}
+
+.navigation2 button:hover {
+  background-color: #661BFF;
+  color: white;
+}
+</style>
+</body>
+</html>
